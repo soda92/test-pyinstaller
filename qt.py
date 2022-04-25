@@ -9,6 +9,17 @@ class Main(QtCore.QObject):
 
 
 def main():
+    from pathlib import Path
+
+    CURRENT = Path(__file__).resolve().parent
+    data = CURRENT.joinpath("data").joinpath("data.txt")
+    with open(str(data), mode="r", encoding="utf-8") as f:
+        print(f.read())
+
+    from data import func
+
+    func.hello_data()
+
     app = QtCore.QCoreApplication(sys.argv)
     Main()
     QtCore.QTimer.singleShot(0, app.exit)
