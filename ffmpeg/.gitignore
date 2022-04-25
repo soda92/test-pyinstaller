@@ -1,0 +1,3 @@
+# download ffmpeg, ffplay, ffprobe exe files and put them 
+# in current directory
+*.exe

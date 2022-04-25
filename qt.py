@@ -33,6 +33,10 @@ def main():
     QtCore.QTimer.singleShot(0, app.exit)
     app.exec()
 
+    ffmpeg = CURRENT.joinpath("ffmpeg/ffmpeg.exe")
+    import subprocess
+    subprocess.run(args=[str(ffmpeg), "-version"])
+
 
 if __name__ == "__main__":
     main()
