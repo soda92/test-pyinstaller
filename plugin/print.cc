@@ -7,5 +7,5 @@ extern "C"
 
 void print_hello()
 {
-    fmt::print("hello world\n");
+    fmt::print("hello from fmt\n");
 }

@@ -2,10 +2,10 @@
 
 
 block_cipher = None
-added_files = [('data', 'data')]
+added_files = [("data", "data"), ("pdist", "pdist")]
 
 a = Analysis(
-    ['qt.py'],
+    ["qt.py"],
     pathex=[],
     binaries=[],
     datas=added_files,
@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='qt',
+    name="qt",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

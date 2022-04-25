@@ -15,6 +15,14 @@ def main():
     data = CURRENT.joinpath("data").joinpath("data.txt")
     with open(str(data), mode="r", encoding="utf-8") as f:
         print(f.read())
+    
+    if len(sys.argv) >= 2:
+        breakpoint()
+    dll = CURRENT.joinpath("pdist").joinpath("libapp.dll")
+    import ctypes
+
+    dll = ctypes.CDLL(str(dll))
+    dll.print_hello()
 
     from data import func
 
